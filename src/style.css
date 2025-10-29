@@ -1,0 +1,509 @@
+body {
+  scroll-behavior: smooth;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   HERO VIDEO
+========================= */
+.hero-video {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+
+.hero-video .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-video .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-video .content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease;
+}
+
+.logo-banner {
+  max-width: 220px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Botón hero */
+.hero-video .btn {
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-video .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+}
+/* ===================================
+   SECCIÓN BENEFICIOS (UI/UX MEJORADA)
+====================================== */
+
+#beneficios {
+    /* 1. Fondo con una nueva textura más sutil y artística */
+    background-image: url('/public/mareaback1.png'); /* Asegúrate de tener esta imagen en la carpeta pública *
+    background-size: cover;
+    background-attachment: fixed; /* Mantiene la imagen fija durante el scroll */
+    background-position: center;
+    position: relative;
+    padding: 6rem 1rem; /* Padding ajustado para móviles */
+}
+
+/* Overlay más ligero para dejar ver la textura del fondo */
+#beneficios::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.75); /* Un poco menos oscuro */
+    z-index: 1;
+}
+
+/* Asegura que el contenido esté por encima del overlay */
+#beneficios .container {
+    position: relative;
+    z-index: 2;
+}
+
+#beneficios h2 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 3rem; /* Más espacio para el título */
+}
+
+.beneficio-card {
+    /* 2. Efecto Glassmorphism mejorado para mayor visibilidad */
+    background: rgba(255, 255, 255, 0.05); /* Tinte blanco muy sutil */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Borde más definido */
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
+    color: #fff; /* Texto blanco puro para máximo contraste */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3); /* Sombra para legibilidad */
+    font-size: 1.1rem;
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* 3. Transición más suave */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.beneficio-card:hover {
+    transform: translateY(-10px); /* Efecto de levantamiento simplificado */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.35); 
+}
+
+
+
+/* =========================
+   GALERÍA
+========================= */
+#galeria h2 {
+  font-weight: 700;
+  color: #222;
+}
+
+.carousel-inner img {
+  max-height: 500px;
+  object-fit: cover;
+}
+
+/* =========================
+   HERO VIDEO FIX
+========================= */
+#hero-video video {
+  object-fit: cover;
+  z-index: 1;
+}
+
+#hero-video .bg-dark {
+  z-index: 2;
+}
+
+#hero-video .position-relative.d-flex {
+  z-index: 3;
+}
+
+/* =========================
+   TESTIMONIOS
+========================= */
+
+#testimonios {
+ 
+  background:url('/public/mareaback1.png');
+  
+}
+#testimonios h2 {
+  font-weight: 700;
+  color: #fcfcfc; /* Texto visible sobre fondo claro */
+  margin-bottom: 2rem;
+}
+
+#testimonios .card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+#testimonios video {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom en hover */
+#testimonios .card:hover video {
+  transform: scale(1.05);
+}
+
+/* Efecto flotante en hover */
+#testimonios .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Overlay encima del video */
+#testimonios .card::after {
+  content: "▶ Ver testimonio";
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#testimonios .card:hover::after {
+  opacity: 1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  #testimonios video {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-video {
+    height: 70vh; /* menos alto en móviles */
+  }
+
+  .logo-banner {
+    max-width: 160px;
+  }
+
+  #testimonios video {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-video {
+    height: 60vh;
+  }
+
+  .hero-video .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  #testimonios video {
+    height: 180px;
+  }
+
+  #testimonios .card::after {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}
+
+
+/* =========================
+   MAPA
+========================= */
+.map-section {
+  background: url('/public/mareaback1.png');
+  padding: 4rem 1rem;
+}
+
+.map-section h2 {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.map-section p {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   GALERÍA CON VIDEO DE FONDO
+========================= */
+
+#que-es {
+    /* Eliminamos bg-light para que el video y el overlay dominen */
+    background: #000; /* Fondo negro de respaldo */
+}
+
+/* El video debe ser posicionado de forma absoluta */
+.bg-video-galeria {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* El video está detrás del contenido */
+}
+
+/* Overlay para oscurecer el video y mejorar la lectura */
+.overlay-galeria {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Ajusta el nivel de oscuridad para que el texto blanco sea legible */
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 2; /* El overlay está encima del video */
+}
+
+/* Asegura que el contenido (carrusel y títulos) esté encima del overlay */
+#que-es .container {
+    position: relative;
+    z-index: 3;
+}
+
+#que-es h2 {
+    /* Sobreescribe la regla anterior para que el título sea blanco */
+    color: white !important; 
+}
+
+/* Mejora la sombra del carrusel para que destaque en el video */
+.carousel-inner {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Quita las clases de fondo que ya no son necesarias en la galería */
+#galeria.bg-light {
+    background: none;
+}
+
+/* =========================
+   REDES SOCIALES DESTACADAS - ESTILO NEÓN (CORREGIDO)
+========================= */
+#redes {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+}
+
+#redes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+#redes p.lead {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-social {
+    font-size: 1.2rem;
+    padding: 0.8rem 2.2rem;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    /* --- AQUÍ ESTÁ EL CAMBIO --- */
+    transition: all 1s ease-in-out; 
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem; 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.btn-social i {
+    font-size: 1.4rem;
+    color: #fff;
+    transition: color 0.4s ease-in-out;
+}
+
+/* COLORES BASE DE LOS BOTONES CON DEGRADADO */
+
+/* WhatsApp Degradado */
+.btn-whatsapp {
+    background: linear-gradient(45deg, #128C7E, #25D366);
+}
+
+/* Instagram Degradado (más vibrante) */
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #bc1888);
+}
+
+/* Facebook Degradado */
+.btn-facebook {
+    background: linear-gradient(45deg, #3b5998, #1877F2);
+}
+
+/* EFECTO NEÓN EN HOVER (Iluminación) */
+.btn-social:hover {
+    transform: translateY(-5px) scale(1.08); /* Efecto más notorio */
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+/* WhatsApp Neón HOVER */
+.btn-whatsapp:hover {
+    box-shadow: 0 0 15px #25D366, 0 0 30px #25D366, 0 0 45px #25D366;
+}
+
+/* Instagram Neón HOVER */
+.btn-instagram:hover {
+    box-shadow: 0 0 15px #dc2743, 0 0 30px #e6683c, 0 0 45px #f09433;
+}
+
+/* Facebook Neón HOVER */
+.btn-facebook:hover {
+    box-shadow: 0 0 15px #3b5998, 0 0 30px #3b5998, 0 0 45px #1877F2;
+}
+
+/* Responsive para los botones (sin cambios) */
+@media (max-width: 576px) {
+    .d-flex.justify-content-center.gap-4 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-social {
+        width: 80%;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        padding: 0.7rem 1.8rem;
+    }
+    .btn-social:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* ===================================
+   ESTILOS PARA EL NAVBAR MODERNO 
+   (Añade esto al final de tu style.css)
+====================================== */
+
+.navbar {
+    /* Transición suave para el cambio de fondo y el efecto blur */
+    transition: background-color 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
+}
+
+/* Estilo que toma el navbar al hacer scroll */
+.navbar.scrolled {
+    background-color: rgba(10, 10, 10, 0.75); /* Fondo oscuro semitransparente */
+    backdrop-filter: blur(10px); /* Efecto "glassmorphism" */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Estilos para los links de navegación */
+.navbar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    padding: 8px 0;
+    margin: 0 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.4s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #fff;
+}
+
+/* Animación de la línea inferior en hover */
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #25D366; /* Verde neón de tus botones */
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* CAMBIO: Se eliminó .active::after para que solo funcione en hover */
+.navbar .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Ajustes para el botón de menú en móviles */
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
