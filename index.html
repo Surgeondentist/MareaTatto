@@ -3,274 +3,562 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mareatattoo</title>
-    <link rel="stylesheet" href="./src/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta
+      name="description"
+      content="Transforma cicatrices y emociones en arte. Marea Tattoo Studio combina psicología y tatuaje terapéutico en Bogotá para ayudarte a resignificar tu historia."
+    />
+    <title>Marea Tattoo Studio | Resignifica tu historia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
- <body class="bg-dark text-light"  >
-
-    <!-- Navbar -->
-        <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fa-solid fa-pen-nib me-2"></i>ResignicARTE
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#que-es">¿Quienes Somos?</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#mapa">Encuéntranos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#redes">Redes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
+  <body>
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#inicio">
+          Marea<span>Tattoo</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alternar navegación"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#beneficios">Beneficios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#proceso">Proceso</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonios">Testimonios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#galeria">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-
-    <!-- Hero con video footer -->
-    <header class="hero-video d-flex flex-column justify-content-center align-items-center text-center">
-      <video autoplay muted loop playsinline class="bg-video">
-        <source src="/public/video2.mp4" type="video/mp4" />
-        Tu navegador no soporta video en HTML5.
-      </video>
-      <div class="overlay"></div>
-
-      <div class="content">
-        <img src="/public/logo1.png" alt="Marea Tattoo Shop Logo" class="logo-banner mb-4" />
-        <h1 class="display-4 fw-bold">Marea Tattoo Studio</h1>
-        <p class="lead">Arte y Psicología unidos para sanar</p>
-        <a href="https://wa.me/573012966467" class="btn btn-success btn-lg mt-3 shadow">
-          Reserva tu cita
-        </a>
-      </div>
-    </header>
-
-
-
-    <!-- Galería -->    
-    <section id="que-es" class="position-relative py-5 overflow-hidden text-light">
-        <video autoplay muted loop playsinline class="bg-video-galeria">
-          <source src="/public/video1.mp4" type="video/mp4" />
-          Tu navegador no soporta video.
-        </video>
-        <div class="overlay-galeria"></div>
-
-        <div class="container position-relative z-index-content">
-            <h2 class="text-center mb-4">¿Quienes somos?</h2>
-      <p class="text-center">
-        Un movimiento que combina el poder del tatuaje con la profundidad de la terapia psicológica.
-        El arte sobre la piel como herramienta de sanación y resignificación personal.
-      </p>
-            <div id="carouselResignicarte" class="carousel slide" data-bs-ride="carousel">
-              
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselResignicarte" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#carouselResignicarte" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#carouselResignicarte" data-bs-slide-to="2"></button>
-              </div>
-
-              <div class="carousel-inner rounded shadow-lg">
-                <div class="carousel-item active">
-                  <img src="/public/tatto1.png" class="d-block w-100" alt="Tatuaje artístico con enfoque terapéutico">
-                </div>
-                <div class="carousel-item">
-                  <img src="/public/tatto2.png" class="d-block w-100" alt="Proceso creativo ResignicARTE">
-                </div>
-                <div class="carousel-item">
-                  <img src="/public/tatto3.png" class="d-block w-100" alt="Sesión de tatuaje y sanación">
-                </div>
-              </div>
-
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselResignicarte" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselResignicarte" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-              </button>
+    <main>
+      <header id="inicio" class="hero">
+        <div class="hero__media">
+          <video
+            class="hero__video"
+            autoplay
+            muted
+            loop
+            playsinline
+            data-hero-video
+          >
+            <source src="/video2.mp4" type="video/mp4" />
+            Tu navegador no soporta video en HTML5.
+          </video>
+          <div class="hero__overlay"></div>
+        </div>
+        <div class="container hero__content">
+          <img
+            src="/logo_transparente.png"
+            alt="Marea Tattoo Studio"
+            class="hero__logo"
+          />
+          <span class="hero__tag">
+            <i class="fa-solid fa-heart-pulse"></i>
+            Tatuajes terapéuticos
+          </span>
+          <h1 class="hero__title">
+            Resignifica tus cicatrices en símbolos de fortaleza.
+          </h1>
+          <p class="hero__subtitle">
+            Somos un estudio boutique que integra psicología clínica y arte
+            corporal para acompañarte en un proceso de sanación profundo y
+            personalizado. Creamos tatuajes que cuentan tu historia con orgullo.
+          </p>
+          <div class="hero__ctas">
+            <a
+              class="btn-pill btn-pill--primary"
+              href="https://wa.me/573012966467"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              Agenda una sesión
+            </a>
+            <a class="btn-pill btn-pill--ghost" href="#proceso">
+              <i class="fa-regular fa-circle-play"></i>
+              Cómo trabajamos
+            </a>
+          </div>
+          <div class="hero__metrics">
+            <div class="metric-card">
+              <strong>+250</strong>
+              <span>Personas que transformaron su historia con Marea Tattoo.</span>
             </div>
-        </div>
-    </section>
-
-
-<!-- Beneficios (Estructura con Enlaces) -->
-<section id="beneficios">
-  <div class="container">
-    <h2 class="text-center">Beneficios</h2>
-    <div class="row g-4 justify-content-center">
-
-      <!-- Tarjeta 1 con enlace -->
-      <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-        <a href="beneficio-expresion.html" class="beneficio-card-link w-100">
-          <div class="beneficio-card h-100">
-            <span>🎨 Expresión artística única</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Tarjeta 2 con enlace -->
-      <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-        <a href="benficio-psicologico.html" class="beneficio-card-link w-100">
-          <div class="beneficio-card h-100">
-            <span>🧠 Acompañamiento psicológico</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Tarjeta 3 con enlace -->
-      <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-        <a href="beneficio-sanacion.html" class="beneficio-card-link w-100">
-          <div class="beneficio-card h-100">
-            <span>💫 Proceso de sanación emocional</span>
-          </div>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- Video de fondo -->
-        <section id="hero-video" class="position-relative vh-100 overflow-hidden">
-  
-  <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover position-absolute top-0 start-0">
-    <source src="public/video3.mp4" type="video/mp4">
-    Tu navegador no soporta la reproducción de video.
-  </video>
-
-  <!-- Capa oscura para contraste -->
-  <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
-
-  <!-- Contenido encima -->
-  <div class="position-relative d-flex flex-column justify-content-center align-items-center text-center h-100 text-white px-3">
-    <h2 class="display-4 fw-bold">ResignificARTE en acción</h2>
-    <p class="lead mb-4">Transforma cicatricez en simbolos de fortaleza.</p>
-    <a href="https://wa.me/573012966467" target="_blank" class="btn btn-success btn-lg shadow-lg">
-      Conocemos más
-    </a>
-  </div>
-</section>
-
-<!-- TESTIMONIOS (Estructura Corregida) -->
-<section id="testimonios">
-  <div class="container">
-    <h2 class="text-center">Testimonios</h2>
-    <div class="row g-4">
-      <!-- Testimonio 1 -->
-      <div class="col-md-4">
-        <div class="card shadow-lg border-0 h-100 text-center">
-          <video class="card-img-top rounded-top" autoplay muted loop playsinline>
-            <source src="public/testimonio1.mp4" type="video/mp4">
-            Tu navegador no soporta videos en HTML5.
-          </video>
-          <div class="card-body">
-            <h6 class="fw-bold mb-0">— Camila R.</h6>
+            <div class="metric-card">
+              <strong>90%</strong>
+              <span>
+                De nuestros clientes reafirman su confianza y seguridad tras vivir la experiencia Marea
+              </span>
+            </div>
+            <div class="metric-card">
+              <strong>100%</strong>
+              <span>
+                Diseños personalizados que honran tus símbolos y tu cuerpo.
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Testimonio 2 -->
-      <div class="col-md-4">
-        <div class="card shadow-lg border-0 h-100 text-center">
-          <video class="card-img-top rounded-top" autoplay muted loop playsinline>
-            <source src="public/testimonio2.mp4" type="video/mp4">
-          </video>
-          <div class="card-body">
-            <h6 class="fw-bold mb-0">— Andrés P.</h6>
-          </div>
-        </div>
-      </div>
-      <!-- Testimonio 3 -->
-      <div class="col-md-4">
-        <div class="card shadow-lg border-0 h-100 text-center">
-          <video class="card-img-top rounded-top" autoplay muted loop playsinline>
-            <source src="public/testimonio3.mp4" type="video/mp4">
-          </video>
-          <div class="card-body">
-            <h6 class="fw-bold mb-0">— Laura M.</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </header>
 
-<!-- SECTION DEL MAPA -->
-
-
-<section id="mapa" class="map-section py-5">
-  <div class="container text-center">
-    <h2 class="mb-4">Encuéntranos</h2>
-    <p class="mb-3">Visita nuestro estudio en la ubicación marcada en el mapa.</p>
-    <div class="map-container">
-      <!-- Reemplaza la URL con tu ubicación real en Google Maps -->
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.593470346359!2d-74.11941660000001!3d4.6663410999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bee8beebb15%3A0x1d2370d612522159!2sMarea%20Tattoo%20Shop!5e0!3m2!1ses!2sco!4v1759013411029!5m2!1ses!2sco"
-        width="100%"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </div>
-</section>
-
-   <!-- Redes sociales -->
-<section id="redes" class="py-5 bg-dark text-center">
+      <section id="sobre" class="section">
         <div class="container">
-            <h2 class="mb-4 text-light fw-bold">Conéctate con ResignificARTE</h2>
-            <p class="lead text-light-50 mb-5">Síguenos en nuestras redes para ver más de nuestro arte y proceso.</p>
-            <div class="d-flex justify-content-center gap-4">
-                <a href="https://wa.me/573012966467" target="_blank" class="btn btn-social btn-whatsapp">
-                    <i class="fab fa-whatsapp me-2"></i> WhatsApp
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="surface">
+                <div class="section__header text-start">
+                  <span class="section__eyebrow">¿Quiénes somos?</span>
+                  <h2 class="section__title">
+                    Psicología y arte unidos para resignificar tu piel.
+                  </h2>
+                  <p class="section__subtitle text-start">
+                    Marea Tattoo Studio nació para las personas que desean
+                    transformar cicatrices, marcas o momentos difíciles en
+                    símbolos de resiliencia. Combinamos acompañamiento
+                    terapéutico con un proceso creativo íntimo, para que cada
+                    tatuaje sea una experiencia de sanación real.
+                  </p>
+                </div>
+                <ul class="list-unstyled text-secondary">
+                  <li class="mb-3">
+                    <i class="fa-solid fa-check text-success me-2"></i>
+                    Sesiones de escucha y diseño guiado por psicología clínica.
+                  </li>
+                  <li class="mb-3">
+                    <i class="fa-solid fa-check text-success me-2"></i>
+                    Ritual de tatuaje respetuoso con tu ritmo y tus emociones.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-check text-success me-2"></i>
+                    Acompañamiento posterior para integrar el significado.
+                  </li>
+                </ul>
+                <a
+                  class="btn-pill btn-pill--primary mt-4"
+                  href="https://wa.me/573012966467"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Reserva tu cita
                 </a>
-                <a href="https://www.instagram.com/marea_tattooshop/" target="_blank" class="btn btn-social btn-instagram">
-                    <i class="fab fa-instagram me-2"></i> Instagram
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61575251770353&ref=pl_edit_xav_ig_profile_page_web#" target="_blank" class="btn btn-social btn-facebook">
-                    <i class="fab fa-facebook-f me-2"></i> Facebook
-                </a>
+              </div>
             </div>
+            <div class="col-lg-6">
+              <div class="gallery-grid">
+                <div class="gallery-item">
+                  <img src="/tatto1.png" alt="Diseño terapéutico Marea Tattoo" />
+                </div>
+                <div class="gallery-item">
+                  <img src="/tatto2.png" alt="Proceso creativo en estudio" />
+                </div>
+                <div class="gallery-item">
+                  <img src="/tatto3.png" alt="Detalle de tatuaje simbólico" />
+                </div>
+                <div class="gallery-item">
+                  <img src="/mareaback1.png" alt="Equipo Marea Tattoo" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Contacto -->
-    <section id="contacto" class="container py-5 text-center">
-      <h2 class="mb-4">Contacto</h2>
-      <p>Bogota D.C.👹
-Especialistas en línea fina, blackwork, sombras, acuarela
-@koz_ink @castas_mareatattoo
-Cotiza tu idea👺
-Cra 75 # 24-36, Bogotá, Colombia 110931</p>
-      <a href="https://wa.me/573012966467" class="btn btn-outline-success btn-lg">
-        Escríbenos por WhatsApp
-      </a>
-    </section>
+      <section id="beneficios" class="section">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">Beneficios</span>
+            <h2 class="section__title">Un proceso para sanar desde el arte.</h2>
+            <p class="section__subtitle">
+              Tu historia merece ser contada con cuidado. Estas son las razones
+              por las que nuestras clientas deciden empezar su transformación.
+            </p>
+          </div>
+          <div class="benefits-grid">
+            <article class="benefit-card">
+              <div class="benefit-card__icon">
+                <i class="fa-solid fa-feather-pointed"></i>
+              </div>
+              <h3 class="benefit-card__title">Diseño que nace de ti</h3>
+              <p class="benefit-card__copy">
+                Co-creamos tu tatuaje a partir de sesiones de escucha donde
+                exploramos símbolos, emociones y lo que quieres resignificar.
+              </p>
+              <a class="benefit-card__cta" href="beneficio-expresion.html">
+                Conoce el proceso creativo
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+            <article class="benefit-card">
+              <div class="benefit-card__icon">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+              <h3 class="benefit-card__title">Acompañamiento terapéutico</h3>
+              <p class="benefit-card__copy">
+                Psicólogas especializadas te guían para que el proceso sea
+                seguro, respetuoso de tu historia y alineado con tu bienestar.
+              </p>
+              <a class="benefit-card__cta" href="benficio-psicologico.html">
+                Descubre cómo te cuidamos
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+            <article class="benefit-card">
+              <div class="benefit-card__icon">
+                <i class="fa-solid fa-sparkles"></i>
+              </div>
+              <h3 class="benefit-card__title">Ritual transformador</h3>
+              <p class="benefit-card__copy">
+                Vivirás un ritual íntimo y simbólico para abrazar tu nueva piel
+                con orgullo, mientras cerramos con herramientas de integración.
+              </p>
+              <a class="benefit-card__cta" href="beneficio-sanacion.html">
+                Vive el ritual completo
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <!-- Footer -->
-    <footer class="bg-black text-center py-3">
-      <p>&copy; 2025 ResignicARTE - Todos los derechos reservados</p>
+      <section id="proceso" class="section">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">Tu camino</span>
+            <h2 class="section__title">Así construimos tu tatuaje terapéutico.</h2>
+            <p class="section__subtitle">
+              Cada fase está pensada para que te sientas acompañada de principio
+              a fin, con claridad, contención emocional y un resultado que te
+              hace sonreír cada vez que lo ves.
+            </p>
+          </div>
+          <div class="process-grid">
+            <article class="process-card">
+              <span class="process-card__step">01</span>
+              <h3 class="process-card__title">Exploración emocional</h3>
+              <p class="process-card__copy">
+                Agendamos una llamada para conocer tu historia y definir objetivos.
+                Esta conversación es el punto de partida para construir confianza.
+              </p>
+            </article>
+            <article class="process-card">
+              <span class="process-card__step">02</span>
+              <h3 class="process-card__title">Diseño co-creado</h3>
+              <p class="process-card__copy">
+                A partir de tus símbolos, proponemos bocetos personalizados. Afinamos
+                contigo cada detalle hasta que sientas plena resonancia.
+              </p>
+            </article>
+            <article class="process-card">
+              <span class="process-card__step">03</span>
+              <h3 class="process-card__title">Ritual & seguimiento</h3>
+              <p class="process-card__copy">
+                El día del tatuaje cuidamos cada emoción, cerrando con guía de autocuidado
+                y un encuentro posterior para integrar el significado.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonios" class="section testimonials">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">Voces reales</span>
+            <h2 class="section__title">Historias que hoy se cuentan con orgullo.</h2>
+            <p class="section__subtitle">
+              Mira cómo otras personas resignificaron sus cicatrices con
+              acompañamiento terapéutico y arte consciente.
+            </p>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <video autoplay muted loop playsinline>
+                <source src="/testimonio1.mp4" type="video/mp4" />
+                Tu navegador no soporta video.
+              </video>
+              <div class="testimonial-card__body">
+                <p class="mb-2">
+                  “Pude transformar una cicatriz que escondí por años. Sentí que
+                  por fin cerré un ciclo con amor.”
+                </p>
+                <span class="testimonial-card__name">Camila R.</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <video autoplay muted loop playsinline>
+                <source src="/testimonio2.mp4" type="video/mp4" />
+              </video>
+              <div class="testimonial-card__body">
+                <p class="mb-2">
+                  “El acompañamiento psicológico hizo toda la diferencia. Lloré,
+                  sané y terminé con el tatuaje que soñaba.”
+                </p>
+                <span class="testimonial-card__name">Andrés P.</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <video autoplay muted loop playsinline>
+                <source src="/testimonio3.mp4" type="video/mp4" />
+              </video>
+              <div class="testimonial-card__body">
+                <p class="mb-2">
+                  “Es un ritual hermoso. No solo es arte: es encontrar una nueva
+                  narrativa para mi cuerpo.”
+                </p>
+                <span class="testimonial-card__name">Laura M.</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" class="section">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">Galería</span>
+            <h2 class="section__title">Un vistazo a nuestros rituales en estudio.</h2>
+            <p class="section__subtitle">
+              Cada pieza cuenta con su propio significado. Estos son algunos
+              momentos y detalles que viven quienes nos visitan.
+            </p>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <video autoplay muted loop playsinline>
+                <source src="/video1.mp4" type="video/mp4" />
+                Tu navegador no soporta video.
+              </video>
+            </div>
+            <div class="gallery-item">
+              <img src="/sanacion.png" alt="Detalle de sanación Marea Tattoo" />
+            </div>
+            <div class="gallery-item">
+              <video autoplay muted loop playsinline>
+                <source src="/video3.mp4" type="video/mp4" />
+                Tu navegador no soporta video.
+              </video>
+            </div>
+            <div class="gallery-item">
+              <video autoplay muted loop playsinline>
+                <source src="/video7.mp4" type="video/mp4" />
+                Tu navegador no soporta video.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-banner">
+            <div>
+              <h2 class="cta-banner__title">
+                Agenda hoy tu cita inicial.
+              </h2>
+              <p class="cta-banner__copy">
+                Responde 3 preguntas y una especialista de nuestro equipo te
+                contactará en menos de 24 horas para guiarte en el siguiente
+                paso.
+              </p>
+            </div>
+            <div class="text-center text-lg-end">
+              <a
+                class="btn-pill btn-pill--primary"
+                href="https://wa.me/573012966467"
+                target="_blank"
+                rel="noopener"
+              >
+                Habla por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mapa" class="section">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__eyebrow">Visítanos</span>
+            <h2 class="section__title">Nuestro estudio en Bogotá.</h2>
+            <p class="section__subtitle">
+              Te recibimos con un espacio íntimo y seguro en el que puedes
+              expresarte sin juicio y vivir el proceso con calma.
+            </p>
+          </div>
+          <div class="map-section">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-5">
+                <h3 class="fw-semibold mb-3">Marea Tattoo Studio</h3>
+                <p class="text-secondary mb-4">
+                  Cra 75 # 24-36, Bogotá, Colombia 110931<br />
+                  Citas con reserva previa · Horario flexible
+                </p>
+                <a
+                  class="btn-pill btn-pill--ghost"
+                  href="https://maps.app.goo.gl/64yxTfuhKDa63yq56"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                  Abrir en Google Maps
+                </a>
+              </div>
+              <div class="col-lg-7">
+                <div class="map-wrapper">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.593470346359!2d-74.11941660000001!3d4.6663410999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bee8beebb15%3A0x1d2370d612522159!2sMarea%20Tattoo%20Shop!5e0!3m2!1ses!2sco!4v1759013411029!5m2!1ses!2sco"
+                    width="100%"
+                    height="420"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Ubicación Marea Tattoo Studio"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section">
+        <div class="container">
+          <div class="contact">
+            <div class="contact-card">
+              <h2 class="contact-card__title">Conversemos sobre tu idea.</h2>
+              <p class="contact-card__copy">
+                Cuéntanos qué quieres resignificar y te ayudamos a transformarlo
+                en un símbolo que honre tu proceso. Escríbenos y agenda tu
+                primera conversación sin costo.
+              </p>
+              <a
+                class="btn-pill btn-pill--primary mb-4"
+                href="https://wa.me/573012966467"
+                target="_blank"
+                rel="noopener"
+              >
+                Escríbenos ahora
+              </a>
+              <div class="contact-social">
+                <a
+                  href="https://wa.me/573012966467"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-brands fa-whatsapp"></i>
+                  WhatsApp
+                </a>
+                <a
+                  href="https://www.instagram.com/marea_tattooshop/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                  Instagram
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61575251770353"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                  Facebook
+                </a>
+              </div>
+            </div>
+            <div class="contact-info">
+              <div class="contact-info__item">
+                <div class="contact-info__icon">
+                  <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div>
+                  <h3 class="contact-info__title">Reserva flexible</h3>
+                  <p class="contact-info__details">
+                    Agenda sesiones presenciales o virtuales para la etapa de
+                    exploración emocional y diseño.
+                  </p>
+                </div>
+              </div>
+              <div class="contact-info__item">
+                <div class="contact-info__icon">
+                  <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                  <h3 class="contact-info__title">Entorno seguro</h3>
+                  <p class="contact-info__details">
+                    Equipo especializado en trauma y enfoque de género para
+                    cuidar tu bienestar emocional.
+                  </p>
+                </div>
+              </div>
+              <div class="contact-info__item">
+                <div class="contact-info__icon">
+                  <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+                <div>
+                  <h3 class="contact-info__title">Arte personalizado</h3>
+                  <p class="contact-info__details">
+                    Diseños únicos que respetan tu cuerpo, tus símbolos y el
+                    mensaje que quieres proyectar.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="mb-1">
+          &copy; 2025 <span>Marea Tattoo Studio</span>. Arte terapéutico hecho
+          en Bogotá D.C.
+        </p>
+        <small>
+          Línea WhatsApp:
+          <a href="https://wa.me/573012966467" target="_blank" rel="noopener">
+            +57 301 296 6467
+          </a>
+        </small>
+      </div>
     </footer>
 
     <script type="module" src="/src/main.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const navbar = document.getElementById('mainNavbar');
-
-        // Esta función revisa si has bajado más de 50 píxeles
-        // y añade la clase .scrolled a tu navbar.
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    });
-</script>
   </body>
 </html>
+
