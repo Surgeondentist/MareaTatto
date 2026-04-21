@@ -8,10 +8,53 @@
       content="Transforma cicatrices y emociones en arte. Marea Tattoo Studio combina psicología y tatuaje terapéutico en Bogotá para ayudarte a resignificar tu historia."
     />
     <title>Marea Tattoo Studio | Resignifica tu historia</title>
+    <link rel="canonical" href="https://www.mareatattoo.shop/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:url" content="https://www.mareatattoo.shop/" />
+    <meta property="og:title" content="Marea Tattoo Studio | Resignifica tu historia" />
+    <meta
+      property="og:description"
+      content="Transforma cicatrices y emociones en arte. Psicología y tatuaje terapéutico en Bogotá."
+    />
+    <meta property="og:image" content="https://www.mareatattoo.shop/logo_transparente.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Marea Tattoo Studio | Resignifica tu historia" />
+    <meta
+      name="twitter:description"
+      content="Transforma cicatrices y emociones en arte. Psicología y tatuaje terapéutico en Bogotá."
+    />
+    <meta name="twitter:image" content="https://www.mareatattoo.shop/logo_transparente.png" />
+    <link rel="icon" href="/logo_transparente.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/logo_transparente.png" />
+    <meta name="theme-color" content="#07070e" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TattooParlor",
+        "name": "Marea Tattoo Studio",
+        "image": "https://www.mareatattoo.shop/logo_transparente.png",
+        "url": "https://www.mareatattoo.shop/",
+        "telephone": "+57-301-296-6467",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Cra 75 # 24-36",
+          "addressLocality": "Bogotá",
+          "addressRegion": "Cundinamarca",
+          "postalCode": "110931",
+          "addressCountry": "CO"
+        },
+        "description": "Estudio boutique de tatuaje terapéutico con acompañamiento psicológico en Bogotá.",
+        "sameAs": [
+          "https://www.instagram.com/marea_tattooshop/",
+          "https://www.facebook.com/profile.php?id=61575251770353"
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&family=Playfair+Display:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -23,6 +66,7 @@
     />
   </head>
   <body>
+    <a class="skip-link" href="#inicio">Saltar al contenido</a>
     <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#inicio">
@@ -54,7 +98,16 @@
               <a class="nav-link" href="#testimonios">Testimonios</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#reseñas-google">Google</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#galeria">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mapa">Ubicación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contacto">Contacto</a>
@@ -69,10 +122,13 @@
         <div class="hero__media">
           <video
             class="hero__video"
+            data-managed="hero"
             autoplay
             muted
             loop
             playsinline
+            preload="metadata"
+            poster="/mareaback1.png"
             data-hero-video
           >
             <source src="/video2.mp4" type="video/mp4" />
@@ -80,11 +136,14 @@
           </video>
           <div class="hero__overlay"></div>
         </div>
-        <div class="container hero__content">
+        <div class="container hero__content" data-reveal="scale">
           <img
             src="/logo_transparente.png"
             alt="Marea Tattoo Studio"
             class="hero__logo"
+            width="220"
+            height="220"
+            fetchpriority="high"
           />
           <span class="hero__tag">
             <i class="fa-solid fa-heart-pulse"></i>
@@ -102,7 +161,7 @@
           <div class="hero__ctas">
             <a
               class="btn-pill btn-pill--primary"
-              href="https://wa.me/573012966467"
+              href="https://wa.me/573012966467?text=Hola%2C%20me%20interesa%20conocer%20el%20proceso%20de%20tatuaje%20terap%C3%A9utico%20en%20Marea%20Tattoo%20Studio."
               target="_blank"
               rel="noopener"
             >
@@ -114,7 +173,7 @@
               Cómo trabajamos
             </a>
           </div>
-          <div class="hero__metrics">
+          <div class="hero__metrics" data-stagger>
             <div class="metric-card">
               <strong>+250</strong>
               <span>Personas que transformaron su historia con Marea Tattoo.</span>
@@ -138,9 +197,9 @@
       <section id="sobre" class="section">
         <div class="container">
           <div class="row align-items-center g-5">
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-reveal="left">
               <div class="surface">
-                <div class="section__header text-start">
+                <div class="section__header text-start" data-reveal>
                   <span class="section__eyebrow">¿Quiénes somos?</span>
                   <h2 class="section__title">
                     Psicología y arte unidos para resignificar tu piel.
@@ -169,7 +228,7 @@
                 </ul>
                 <a
                   class="btn-pill btn-pill--primary mt-4"
-                  href="https://wa.me/573012966467"
+                  href="https://wa.me/573012966467?text=Hola%2C%20me%20interesa%20conocer%20el%20proceso%20de%20tatuaje%20terap%C3%A9utico%20en%20Marea%20Tattoo%20Studio."
                   target="_blank"
                   rel="noopener"
                 >
@@ -177,19 +236,39 @@
                 </a>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="gallery-grid">
+            <div class="col-lg-6" data-reveal="right">
+              <div class="gallery-grid" data-stagger>
                 <div class="gallery-item">
-                  <img src="/tatto1.png" alt="Diseño terapéutico Marea Tattoo" />
+                  <img
+                    src="/tatto1.png"
+                    alt="Diseño terapéutico Marea Tattoo"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div class="gallery-item">
-                  <img src="/tatto2.png" alt="Proceso creativo en estudio" />
+                  <img
+                    src="/tatto2.png"
+                    alt="Proceso creativo en estudio"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div class="gallery-item">
-                  <img src="/tatto3.png" alt="Detalle de tatuaje simbólico" />
+                  <img
+                    src="/tatto3.png"
+                    alt="Detalle de tatuaje simbólico"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <div class="gallery-item">
-                  <img src="/mareaback1.png" alt="Equipo Marea Tattoo" />
+                  <img
+                    src="/mareaback1.png"
+                    alt="Equipo Marea Tattoo"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
               </div>
             </div>
@@ -199,7 +278,7 @@
 
       <section id="beneficios" class="section">
         <div class="container">
-          <div class="section__header">
+          <div class="section__header" data-reveal>
             <span class="section__eyebrow">Beneficios</span>
             <h2 class="section__title">Un proceso para sanar desde el arte.</h2>
             <p class="section__subtitle">
@@ -207,7 +286,7 @@
               por las que nuestras clientas deciden empezar su transformación.
             </p>
           </div>
-          <div class="benefits-grid">
+          <div class="benefits-grid" data-stagger>
             <article class="benefit-card">
               <div class="benefit-card__icon">
                 <i class="fa-solid fa-feather-pointed"></i>
@@ -231,7 +310,7 @@
                 Psicólogas especializadas te guían para que el proceso sea
                 seguro, respetuoso de tu historia y alineado con tu bienestar.
               </p>
-              <a class="benefit-card__cta" href="benficio-psicologico.html">
+              <a class="benefit-card__cta" href="beneficio-psicologico.html">
                 Descubre cómo te cuidamos
                 <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -256,7 +335,7 @@
 
       <section id="proceso" class="section">
         <div class="container">
-          <div class="section__header">
+          <div class="section__header" data-reveal>
             <span class="section__eyebrow">Tu camino</span>
             <h2 class="section__title">Así construimos tu tatuaje terapéutico.</h2>
             <p class="section__subtitle">
@@ -265,7 +344,7 @@
               hace sonreír cada vez que lo ves.
             </p>
           </div>
-          <div class="process-grid">
+          <div class="process-grid" data-stagger>
             <article class="process-card">
               <span class="process-card__step">01</span>
               <h3 class="process-card__title">Exploración emocional</h3>
@@ -296,7 +375,7 @@
 
       <section id="testimonios" class="section testimonials">
         <div class="container">
-          <div class="section__header">
+          <div class="section__header" data-reveal>
             <span class="section__eyebrow">Voces reales</span>
             <h2 class="section__title">Historias que hoy se cuentan con orgullo.</h2>
             <p class="section__subtitle">
@@ -304,9 +383,17 @@
               acompañamiento terapéutico y arte consciente.
             </p>
           </div>
-          <div class="testimonial-grid">
+          <div class="testimonial-grid" data-stagger>
             <article class="testimonial-card">
-              <video autoplay muted loop playsinline>
+              <video
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="/sanacion.png"
+                data-managed="inline"
+                aria-label="Video testimonial de Camila R."
+              >
                 <source src="/testimonio1.mp4" type="video/mp4" />
                 Tu navegador no soporta video.
               </video>
@@ -319,7 +406,15 @@
               </div>
             </article>
             <article class="testimonial-card">
-              <video autoplay muted loop playsinline>
+              <video
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="/sanacion.png"
+                data-managed="inline"
+                aria-label="Video testimonial de Andrés P."
+              >
                 <source src="/testimonio2.mp4" type="video/mp4" />
               </video>
               <div class="testimonial-card__body">
@@ -331,7 +426,15 @@
               </div>
             </article>
             <article class="testimonial-card">
-              <video autoplay muted loop playsinline>
+              <video
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="/sanacion.png"
+                data-managed="inline"
+                aria-label="Video testimonial de Laura M."
+              >
                 <source src="/testimonio3.mp4" type="video/mp4" />
               </video>
               <div class="testimonial-card__body">
@@ -346,9 +449,50 @@
         </div>
       </section>
 
+      <section id="reseñas-google" class="section google-reviews-section">
+        <div class="container">
+          <div class="section__header" data-reveal>
+            <span class="section__eyebrow">Google</span>
+            <h2 class="section__title">Opiniones en Google Maps.</h2>
+            <p class="section__subtitle">
+              Reseñas públicas de clientas y clientes. Google permite mostrar hasta cinco por
+              consulta oficial; el resto puedes verlo en el perfil del estudio.
+            </p>
+          </div>
+          <div id="google-reviews-summary" class="google-reviews-summary" hidden></div>
+          <div
+            id="google-reviews-root"
+            class="google-reviews-grid"
+            data-stagger
+            data-google-reviews-root
+          ></div>
+          <p
+            id="google-reviews-status"
+            class="google-reviews-status text-center mt-3 text-secondary small"
+            hidden
+          ></p>
+          <div class="text-center mt-4">
+            <a
+              id="google-reviews-link"
+              class="btn-pill btn-pill--ghost"
+              href="https://maps.app.goo.gl/64yxTfuhKDa63yq56"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-google"></i>
+              Ver perfil y reseñas en Google
+            </a>
+            <p class="google-reviews-attribution text-center mt-3 mb-0 small text-secondary">
+              Contenido de reseñas proporcionado por Google cuando la API está activa; máximo cinco
+              reseñas por consulta según políticas de Google.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="galeria" class="section">
         <div class="container">
-          <div class="section__header">
+          <div class="section__header" data-reveal>
             <span class="section__eyebrow">Galería</span>
             <h2 class="section__title">Un vistazo a nuestros rituales en estudio.</h2>
             <p class="section__subtitle">
@@ -356,24 +500,53 @@
               momentos y detalles que viven quienes nos visitan.
             </p>
           </div>
-          <div class="gallery-grid">
+          <div class="gallery-grid" data-stagger>
             <div class="gallery-item">
-              <video autoplay muted loop playsinline>
+              <video
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="/sanacion.png"
+                data-managed="inline"
+                aria-label="Momento en el estudio Marea Tattoo"
+              >
                 <source src="/video1.mp4" type="video/mp4" />
                 Tu navegador no soporta video.
               </video>
             </div>
             <div class="gallery-item">
-              <img src="/sanacion.png" alt="Detalle de sanación Marea Tattoo" />
+              <img
+                src="/sanacion.png"
+                alt="Detalle de sanación Marea Tattoo"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
             <div class="gallery-item">
-              <video autoplay muted loop playsinline>
+              <video
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="/sanacion.png"
+                data-managed="inline"
+                aria-label="Ritual de tatuaje en estudio"
+              >
                 <source src="/video3.mp4" type="video/mp4" />
                 Tu navegador no soporta video.
               </video>
             </div>
             <div class="gallery-item">
-              <video autoplay muted loop playsinline>
+              <video
+                muted
+                loop
+                playsinline
+                preload="none"
+                poster="/sanacion.png"
+                data-managed="inline"
+                aria-label="Detalle de trabajo en piel"
+              >
                 <source src="/video7.mp4" type="video/mp4" />
                 Tu navegador no soporta video.
               </video>
@@ -384,7 +557,7 @@
 
       <section class="section">
         <div class="container">
-          <div class="cta-banner">
+          <div class="cta-banner" data-reveal="scale">
             <div>
               <h2 class="cta-banner__title">
                 Agenda hoy tu cita inicial.
@@ -398,7 +571,7 @@
             <div class="text-center text-lg-end">
               <a
                 class="btn-pill btn-pill--primary"
-                href="https://wa.me/573012966467"
+                href="https://wa.me/573012966467?text=Hola%2C%20me%20interesa%20conocer%20el%20proceso%20de%20tatuaje%20terap%C3%A9utico%20en%20Marea%20Tattoo%20Studio."
                 target="_blank"
                 rel="noopener"
               >
@@ -411,7 +584,7 @@
 
       <section id="mapa" class="section">
         <div class="container">
-          <div class="section__header">
+          <div class="section__header" data-reveal>
             <span class="section__eyebrow">Visítanos</span>
             <h2 class="section__title">Nuestro estudio en Bogotá.</h2>
             <p class="section__subtitle">
@@ -419,7 +592,7 @@
               expresarte sin juicio y vivir el proceso con calma.
             </p>
           </div>
-          <div class="map-section">
+          <div class="map-section" data-reveal>
             <div class="row align-items-center g-4">
               <div class="col-lg-5">
                 <h3 class="fw-semibold mb-3">Marea Tattoo Studio</h3>
@@ -456,9 +629,64 @@
         </div>
       </section>
 
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section__header" data-reveal>
+            <span class="section__eyebrow">FAQ</span>
+            <h2 class="section__title">Preguntas frecuentes</h2>
+            <p class="section__subtitle">
+              Respuestas breves a lo que más nos preguntan antes de agendar. Si necesitas más
+              detalle, escríbenos por WhatsApp.
+            </p>
+          </div>
+          <div class="faq-list" data-stagger>
+            <details class="faq-item">
+              <summary>¿Duele más un tatuaje terapéutico que uno tradicional?</summary>
+              <p>
+                La sensación es similar a cualquier tatuaje: depende de la zona y tu umbral. Lo
+                que sí cambia es el ritmo: respetamos pausas, respiración y tu estado emocional para
+                que el cuerpo no se sienta en alerta constante.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Cuánto dura el proceso completo?</summary>
+              <p>
+                Suele incluir una conversación inicial, sesiones de diseño y el día del ritual. El
+                tiempo total varía según la complejidad del diseño y tu disponibilidad; en la
+                primera charla te damos un calendario claro.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Puedo cancelar o reprogramar mi cita?</summary>
+              <p>
+                Sí. Te pedimos avisar con la mayor anticipación posible para ofrecer tu cupo a
+                otra persona en lista de espera. Los detalles de política de reserva los acordamos
+                contigo al confirmar.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>¿Trabajan con cicatrices o marcas sensibles?</summary>
+              <p>
+                Es uno de nuestros enfoques. Evaluamos la piel y tu historia en conjunto con
+                profesionales de salud mental para proponer una técnica y un diseño acordes a tu
+                caso.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>¿La primera conversación tiene costo?</summary>
+              <p>
+                La primera conversación exploratoria por los canales que indicamos en la web está
+                pensada para orientarte sin compromiso. Te explicamos cómo seguir si decides que
+                Marea es tu siguiente paso.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
       <section id="contacto" class="section">
         <div class="container">
-          <div class="contact">
+          <div class="contact" data-stagger>
             <div class="contact-card">
               <h2 class="contact-card__title">Conversemos sobre tu idea.</h2>
               <p class="contact-card__copy">
@@ -468,7 +696,7 @@
               </p>
               <a
                 class="btn-pill btn-pill--primary mb-4"
-                href="https://wa.me/573012966467"
+                href="https://wa.me/573012966467?text=Hola%2C%20me%20interesa%20conocer%20el%20proceso%20de%20tatuaje%20terap%C3%A9utico%20en%20Marea%20Tattoo%20Studio."
                 target="_blank"
                 rel="noopener"
               >
@@ -476,7 +704,7 @@
               </a>
               <div class="contact-social">
                 <a
-                  href="https://wa.me/573012966467"
+                  href="https://wa.me/573012966467?text=Hola%2C%20me%20interesa%20conocer%20el%20proceso%20de%20tatuaje%20terap%C3%A9utico%20en%20Marea%20Tattoo%20Studio."
                   target="_blank"
                   rel="noopener"
                 >
@@ -547,19 +775,27 @@
     <footer class="footer">
       <div class="container">
         <p class="mb-1">
-          &copy; 2025 <span>Marea Tattoo Studio</span>. Arte terapéutico hecho
-          en Bogotá D.C.
+          &copy; <span id="js-year"></span>
+          <span>Marea Tattoo Studio</span>. Arte terapéutico hecho en Bogotá D.C.
         </p>
         <small>
           Línea WhatsApp:
-          <a href="https://wa.me/573012966467" target="_blank" rel="noopener">
+          <a
+            href="https://wa.me/573012966467?text=Hola%2C%20me%20interesa%20conocer%20el%20proceso%20de%20tatuaje%20terap%C3%A9utico%20en%20Marea%20Tattoo%20Studio."
+            target="_blank"
+            rel="noopener"
+          >
             +57 301 296 6467
           </a>
+        </small>
+        <small class="d-block mt-2">
+          <a href="privacy.html" class="footer__legal-link">Privacidad y datos</a>
         </small>
       </div>
     </footer>
 
     <script type="module" src="/src/main.js"></script>
+    <script defer src="/lazy-videos.js"></script>
   </body>
 </html>
 

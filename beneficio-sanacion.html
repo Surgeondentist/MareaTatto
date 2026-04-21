@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proceso de Sanación Emocional | Marea Tattoo Studio</title>
+    <meta
+      name="description"
+      content="Ritual de tatuaje terapéutico para resignificar cicatrices y emociones. Marea Tattoo Studio, Bogotá."
+    />
+    <link rel="canonical" href="https://www.mareatattoo.shop/beneficio-sanacion.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:url" content="https://www.mareatattoo.shop/beneficio-sanacion.html" />
+    <meta property="og:title" content="Proceso de Sanación Emocional | Marea Tattoo Studio" />
+    <meta
+      property="og:description"
+      content="Ritual de tatuaje terapéutico para resignificar cicatrices y emociones. Marea Tattoo Studio, Bogotá."
+    />
+    <meta property="og:image" content="https://www.mareatattoo.shop/logo_transparente.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/logo_transparente.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/logo_transparente.png" />
+    <meta name="theme-color" content="#050507" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,6 +38,7 @@
     <link rel="stylesheet" href="pagina-beneficios.css" />
   </head>
   <body>
+    <a class="skip-link" href="#principal">Saltar al contenido</a>
     <a class="btn-back" href="index.html#beneficios">
       <i class="fa-solid fa-arrow-left"></i>
       Volver
@@ -45,7 +64,7 @@
         </p>
         <a
           class="btn-pill btn-pill--primary"
-          href="https://wa.me/573012966467"
+          href="https://wa.me/573012966467?text=Hola%2C%20me%20interesa%20conocer%20el%20proceso%20de%20tatuaje%20terap%C3%A9utico%20en%20Marea%20Tattoo%20Studio."
           target="_blank"
           rel="noopener"
         >
@@ -54,7 +73,7 @@
       </div>
     </header>
 
-    <main class="benefit-page">
+    <main id="principal" class="benefit-page">
       <section class="benefit-section">
         <article class="benefit-section__card">
           <h2 class="benefit-section__title">Contener, resignificar, celebrar</h2>
@@ -91,7 +110,15 @@
 
         <article class="benefit-section__card">
           <div class="media-card">
-            <video autoplay muted loop playsinline>
+            <video
+              muted
+              loop
+              playsinline
+              preload="none"
+              poster="/sanacion.png"
+              data-managed="inline"
+              aria-label="Ritual de sanación en Marea Tattoo"
+            >
               <source src="/video5.mp4" type="video/mp4" />
               Tu navegador no soporta video en HTML5.
             </video>
@@ -126,7 +153,7 @@
         <div>
           <a
             class="btn-pill btn-pill--primary"
-            href="https://wa.me/573012966467"
+            href="https://wa.me/573012966467?text=Hola%2C%20me%20interesa%20conocer%20el%20proceso%20de%20tatuaje%20terap%C3%A9utico%20en%20Marea%20Tattoo%20Studio."
             target="_blank"
             rel="noopener"
           >
@@ -137,7 +164,9 @@
     </main>
 
     <footer>
-      &copy; 2025 Marea Tattoo Studio · Bogotá D.C.
+      &copy; <span id="footer-year"></span> Marea Tattoo Studio · Bogotá D.C. ·
+      <a href="privacy.html" style="text-decoration: underline">Privacidad</a>
     </footer>
+    <script defer src="/lazy-videos.js"></script>
   </body>
 </html>
