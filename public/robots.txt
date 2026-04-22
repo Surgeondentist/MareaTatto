@@ -1,0 +1,5 @@
+# Dominio canónico del sitio (Search Console / SEO)
+User-agent: *
+Allow: /
+
+Sitemap: https://www.mareatattoo.shop/sitemap.xml
