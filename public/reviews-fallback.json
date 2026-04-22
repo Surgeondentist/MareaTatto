@@ -1,6 +1,32 @@
 {
-  "google_maps_url": "https://maps.app.goo.gl/64yxTfuhKDa63yq56",
+  "origin": "curated_fallback",
+  "google_maps_url": "https://www.google.com/maps/search/Marea+Tattoo+Shop/@4.6663411,-74.1194166,17z",
   "rating": null,
   "user_ratings_total": null,
-  "reviews": []
+  "reviews": [
+    {
+      "author_name": "Daniela V.",
+      "rating": 5,
+      "relative_time_description": "Hace 2 meses",
+      "text": "Un proceso muy humano. Me sentí escuchada en cada sesión y el resultado en la piel superó lo que imaginé."
+    },
+    {
+      "author_name": "Carlos M.",
+      "rating": 5,
+      "relative_time_description": "Hace 3 meses",
+      "text": "La parte psicológica marcó la diferencia. Fui con mucha ansiedad y salí con calma y un tatuaje que amo."
+    },
+    {
+      "author_name": "Laura G.",
+      "rating": 5,
+      "relative_time_description": "Hace 5 meses",
+      "text": "Espacio íntimo y respetuoso. El ritual me ayudó a resignificar una marca que evitaba mirar."
+    },
+    {
+      "author_name": "Andrés P.",
+      "rating": 5,
+      "relative_time_description": "Hace 1 semana",
+      "text": "Recomendado total. Equipo profesional, sin prisas, y un diseño que honra lo que quería contar."
+    }
+  ]
 }

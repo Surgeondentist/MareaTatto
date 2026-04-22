@@ -11,6 +11,14 @@ Sitio web estático generado con Vite para el estudio Marea Tattoo.
 
 Los archivos fuente residen en `src/` y los recursos estáticos compartidos en `public/`. Mantén la carpeta `dist/` fuera del control de versiones (ya está en `.gitignore`).
 
+## Reseñas de Google en la web
+
+La sección **Opiniones en Google Maps** (`index.html`) pide datos a **`/api/reviews`** y, si no hay respuesta útil, usa **`public/reviews-fallback.json`** (textos ilustrativos o curados por vosotros).
+
+- **Vercel (recomendado para Places):** el archivo `api/reviews.js` se despliega como función serverless. En el proyecto de Vercel, crea las variables de entorno `GOOGLE_MAPS_API_KEY` y `GOOGLE_PLACE_ID` (ver `.env.example`). Google devuelve como máximo **cinco** reseñas por petición en Place Details.
+- **Solo Nginx / hosting estático:** no existirá `/api/reviews`; el navegador usará el JSON de `public/reviews-fallback.json`. Ahí puedes sustituir textos reales (con permiso) o dejar `reviews: []` para mostrar solo el mensaje de enlace a Maps.
+- **Desarrollo con Vite:** `vite.config.js` hace proxy de `GET /api/reviews` a `https://www.mareatattoo.shop` para probar la misma ruta que en producción.
+
 ## Flujo de despliegue recomendado
 
 La instancia EC2 debería clonar este repositorio y ejecutarse con Node.js instalado. Para adoptar cambios:

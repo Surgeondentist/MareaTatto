@@ -2,6 +2,14 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
+  server: {
+    proxy: {
+      '/api/reviews': {
+        target: 'https://www.mareatattoo.shop',
+        changeOrigin: true,
+      },
+    },
+  },
   build: {
     rollupOptions: {
       input: {

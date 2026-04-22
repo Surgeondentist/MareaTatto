@@ -180,9 +180,18 @@ async function initGoogleReviews() {
   const summary = document.getElementById('google-reviews-summary');
   const statusEl = document.getElementById('google-reviews-status');
   const linkEl = document.getElementById('google-reviews-link');
+  const attribEl = document.getElementById('google-reviews-attribution');
   if (!root) return;
 
-  const FALLBACK_MAPS = 'https://maps.app.goo.gl/64yxTfuhKDa63yq56';
+  /* URL estable (evita maps.app.goo.gl / Dynamic Links rotos o "not found") */
+  const FALLBACK_MAPS =
+    'https://www.google.com/maps/search/Marea+Tattoo+Shop/@4.6663411,-74.1194166,17z';
+  const ATTRIB_API =
+    'Contenido de reseñas proporcionado por Google Places API (máximo cinco por consulta).';
+  const ATTRIB_FALLBACK =
+    'Textos ilustrativos locales mientras se configura la API; las opiniones verificadas en Google Maps están en el enlace.';
+  const ATTRIB_EMPTY =
+    'Las valoraciones verificadas del estudio están en Google Maps; puedes leerlas con el botón de abajo.';
 
   let apiData = null;
   try {
@@ -200,12 +209,12 @@ async function initGoogleReviews() {
     /* sin archivo */
   }
 
-  const reviews =
-    apiData?.reviews?.length > 0
-      ? apiData.reviews
-      : fbData?.reviews?.length > 0
-        ? fbData.reviews
-        : [];
+  const usedApiReviews = apiData?.reviews?.length > 0;
+  const reviews = usedApiReviews
+    ? apiData.reviews
+    : fbData?.reviews?.length > 0
+      ? fbData.reviews
+      : [];
 
   const rating = apiData?.rating ?? fbData?.rating ?? null;
   const userRatingsTotal = apiData?.user_ratings_total ?? fbData?.user_ratings_total ?? null;
@@ -215,7 +224,7 @@ async function initGoogleReviews() {
     linkEl.href = mapsUrl || FALLBACK_MAPS;
   }
 
-  if (rating != null || userRatingsTotal != null) {
+  if (summary && (rating != null || userRatingsTotal != null)) {
     summary.hidden = false;
     const starRow = rating != null ? starsHtml(Math.round(rating)) : '';
     summary.innerHTML = `
@@ -235,11 +244,50 @@ async function initGoogleReviews() {
       statusEl.hidden = true;
       statusEl.textContent = '';
     }
+
+    const apiConfiguredButFailed =
+      apiData?.configured === true && apiData?.ok === false;
+    if (import.meta.env.DEV && apiConfiguredButFailed) {
+      console.warn('[Reseñas Google]', apiData.status, apiData.error_message, apiData.hint);
+    }
+
+    const emptyHint = apiConfiguredButFailed
+      ? `<p class="google-reviews-empty__hint">
+          No pudimos cargar las opiniones desde Google en este momento.
+          Las reseñas reales siguen disponibles en Google Maps con el botón de abajo.
+        </p>`
+      : '';
+
+    root.innerHTML = `
+      <div class="google-reviews-empty" data-reveal role="status">
+        <div class="google-reviews-empty__brand" aria-hidden="true">
+          <i class="fa-brands fa-google"></i>
+        </div>
+        <h3 class="google-reviews-empty__title">Opiniones en Google Maps</h3>
+        <p class="google-reviews-empty__text">
+          Las reseñas públicas y la valoración del estudio están en nuestro perfil de Google.
+          Cuando la integración con Places API esté activa, aquí podremos destacar hasta cinco opiniones recientes.
+        </p>
+        ${emptyHint}
+      </div>`;
+    if (attribEl) attribEl.textContent = ATTRIB_EMPTY;
+    const emptyEl = root.querySelector('.google-reviews-empty');
+    if (emptyEl) {
+      if (prefersReducedMotion()) {
+        emptyEl.classList.add('is-visible');
+      } else {
+        revealObserver.observe(emptyEl);
+      }
+    }
     return;
   }
 
   if (statusEl) {
     statusEl.hidden = true;
+  }
+
+  if (attribEl) {
+    attribEl.textContent = usedApiReviews ? ATTRIB_API : ATTRIB_FALLBACK;
   }
 
   root.innerHTML = '';
