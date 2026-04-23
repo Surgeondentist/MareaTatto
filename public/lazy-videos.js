@@ -12,13 +12,6 @@
     yearEl.textContent = String(new Date().getFullYear());
   }
 
-  document.querySelectorAll('video[data-managed="hero"]').forEach(function (v) {
-    if (reduced) {
-      v.removeAttribute('autoplay');
-      v.pause();
-    }
-  });
-
   if (reduced) {
     return;
   }

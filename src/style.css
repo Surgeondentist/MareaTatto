@@ -337,16 +337,63 @@ header[id] {
   z-index: -2;
 }
 
-.hero__video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero__slides {
+  position: absolute;
+  inset: 0;
   opacity: 0;
   transition: opacity 1.4s ease;
 }
 
-.hero__video.is-ready {
+.hero__slides.is-ready {
+  opacity: 1;
+}
+
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.35s ease;
+  pointer-events: none;
+}
+
+.hero__slide:nth-child(1) {
+  object-position: 52% 40%;
+}
+
+.hero__slide:nth-child(2) {
+  object-position: 56% 42%;
+}
+
+.hero__slide:nth-child(3) {
+  object-position: 50% 44%;
+}
+
+.hero__slide:nth-child(4) {
+  object-position: 54% 40%;
+}
+
+.hero__slide:nth-child(5) {
+  object-position: 58% 42%;
+}
+
+.hero__slide:nth-child(6) {
+  object-position: 52% 46%;
+}
+
+.hero__slide:nth-child(7) {
+  object-position: 55% 40%;
+}
+
+.hero__slide.is-active {
   opacity: 0.3;
+  z-index: 1;
+}
+
+.hero__slide:not(.is-active) {
+  z-index: 0;
 }
 
 .hero__overlay {
@@ -369,7 +416,11 @@ header[id] {
 }
 
 .hero__logo {
-  width: clamp(110px, 14vw, 190px);
+  display: block;
+  width: clamp(160px, 22vw, 280px);
+  height: auto;
+  max-width: min(280px, 88vw);
+  object-fit: contain;
   margin: 0 auto 2rem;
   filter: drop-shadow(0 8px 28px rgba(196, 154, 60, 0.28));
   animation: heroGlow 7s ease-in-out infinite alternate;
@@ -1494,6 +1545,34 @@ header[id] {
     padding: 7rem 0 4.5rem;
   }
 
+  .hero__slide:nth-child(1) {
+    object-position: 50% 38%;
+  }
+
+  .hero__slide:nth-child(2) {
+    object-position: 54% 40%;
+  }
+
+  .hero__slide:nth-child(3) {
+    object-position: 48% 42%;
+  }
+
+  .hero__slide:nth-child(4) {
+    object-position: 52% 38%;
+  }
+
+  .hero__slide:nth-child(5) {
+    object-position: 56% 40%;
+  }
+
+  .hero__slide:nth-child(6) {
+    object-position: 50% 44%;
+  }
+
+  .hero__slide:nth-child(7) {
+    object-position: 53% 38%;
+  }
+
   .hero__metrics {
     grid-template-columns: 1fr;
   }
@@ -1548,7 +1627,8 @@ header[id] {
     transition-duration: 0.01ms !important;
   }
 
-  .hero__video {
+  .hero__slides,
+  .hero__slide {
     transition: none;
   }
 

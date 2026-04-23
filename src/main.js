@@ -66,11 +66,52 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-/* ── Hero video ── */
-const heroVideo = document.querySelector('[data-hero-video]');
-if (heroVideo) {
-  heroVideo.addEventListener('loadeddata', () => heroVideo.classList.add('is-ready'));
+/* ── Hero: carrusel de fondo (todas las .hero__slide, cada 7 s) ── */
+function initHeroSlides() {
+  const root = document.querySelector('[data-hero-slides]');
+  if (!root) return;
+
+  const slides = Array.from(root.querySelectorAll('.hero__slide'));
+  if (!slides.length) return;
+
+  const markReady = () => root.classList.add('is-ready');
+  const first = slides[0];
+  if (first.complete && first.naturalWidth > 0) markReady();
+  else first.addEventListener('load', markReady, { once: true });
+
+  if (prefersReducedMotion()) return;
+
+  const INTERVAL_MS = 7000;
+  let idx = 0;
+  let intervalId;
+
+  const tick = () => {
+    slides[idx].classList.remove('is-active');
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add('is-active');
+  };
+
+  const start = () => {
+    if (intervalId != null) return;
+    intervalId = window.setInterval(tick, INTERVAL_MS);
+  };
+
+  const stop = () => {
+    if (intervalId != null) {
+      window.clearInterval(intervalId);
+      intervalId = null;
+    }
+  };
+
+  start();
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stop();
+    else start();
+  });
 }
+
+void initHeroSlides();
 
 /* ── Scroll reveal ── */
 const revealObserver = new IntersectionObserver(

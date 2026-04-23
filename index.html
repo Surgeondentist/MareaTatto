@@ -133,20 +133,78 @@
     <main>
       <header id="inicio" class="hero">
         <div class="hero__media">
-          <video
-            class="hero__video"
-            data-managed="hero"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            poster="/mareaback1.png"
-            data-hero-video
-          >
-            <source src="/video2.mp4" type="video/mp4" />
-            Tu navegador no soporta video en HTML5.
-          </video>
+          <div class="hero__slides" data-hero-slides aria-hidden="true">
+            <img
+              class="hero__slide is-active"
+              src="/hero-slide-1.png"
+              alt=""
+              width="1600"
+              height="1200"
+              sizes="100vw"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <img
+              class="hero__slide"
+              src="/hero-slide-2.png"
+              alt=""
+              width="1600"
+              height="1200"
+              sizes="100vw"
+              decoding="async"
+              fetchpriority="low"
+            />
+            <img
+              class="hero__slide"
+              src="/hero-slide-3.png"
+              alt=""
+              width="1600"
+              height="1200"
+              sizes="100vw"
+              decoding="async"
+              fetchpriority="low"
+            />
+            <img
+              class="hero__slide"
+              src="/hero-slide-4.png"
+              alt=""
+              width="1600"
+              height="1200"
+              sizes="100vw"
+              decoding="async"
+              fetchpriority="low"
+            />
+            <img
+              class="hero__slide"
+              src="/hero-slide-5.png"
+              alt=""
+              width="1600"
+              height="1200"
+              sizes="100vw"
+              decoding="async"
+              fetchpriority="low"
+            />
+            <img
+              class="hero__slide"
+              src="/hero-slide-6.png"
+              alt=""
+              width="1600"
+              height="1200"
+              sizes="100vw"
+              decoding="async"
+              fetchpriority="low"
+            />
+            <img
+              class="hero__slide"
+              src="/hero-slide-7.png"
+              alt=""
+              width="1600"
+              height="1200"
+              sizes="100vw"
+              decoding="async"
+              fetchpriority="low"
+            />
+          </div>
           <div class="hero__overlay"></div>
         </div>
         <div class="container hero__content" data-reveal="scale">
@@ -154,8 +212,8 @@
             src="/logo_transparente.png"
             alt="Marea Tattoo Studio"
             class="hero__logo"
-            width="220"
-            height="220"
+            width="863"
+            height="840"
             fetchpriority="high"
           />
           <span class="hero__tag">
